@@ -19,7 +19,7 @@ const ProizvodiSekcija = () => {
         setPoruka("");
         setMotocikli(motocikli);
       } catch {
-        setPoruka("Doslo je do greske prilikom ucitavanja motocikala");
+        setPoruka("Doslo je do greske prilikom ucitavanja motocikala.");
       }
     }
 
@@ -47,7 +47,9 @@ const ProizvodiSekcija = () => {
   return (
     <section className="section">
       <h2>Proizvodi</h2>
-      <label htmlFor="pretraga">Pretraži proizvode</label>
+      <label className="pretraga-oznaka" htmlFor="pretraga">
+        Pretraži proizvode
+      </label>
       <input
         id="pretraga"
         value={upit}
@@ -55,6 +57,7 @@ const ProizvodiSekcija = () => {
       />
       <label>
         <input
+          id="ocjena"
           type="checkbox"
           checked={odabranaCheck}
           onChange={(e) => setOdabranaCheck(e.target.checked)}
